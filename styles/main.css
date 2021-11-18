@@ -1,114 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 /* variables */
+
 :root {
-  --font: 'Poppins', Arial, sans-serif;
+  --font: Poppins, Arial, sans-serif;
+
   --dark: #0c0c0c;
   --black: #000000;
   --white: #ffffff;
   --text: #b8b8b8;
   --darker: #262626;
+
+  --gradientDegree: 135deg;
+
+  --navHeightDesktop: 60px;
+  --navHeightMobile: 110px;
+  --borderRadius: 5px;
+
+  --duration: 0.2s;
 }
 
 /* resets */
-*,
-*:before,
-*:after {
+* {
   box-sizing: border-box;
+  font-family: var(--font);
 }
+
 html,
-body,
-div,
-span,
-object,
-iframe,
-figure,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-code,
-em,
-img,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-b,
-u,
-i,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-main,
-canvas,
-embed,
-footer,
-header,
-nav,
-section,
-video {
+body {
   margin: 0;
   padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-  text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  text-size-adjust: none;
-}
-footer,
-header,
-nav,
-section,
-main {
-  display: block;
-}
-body {
-  line-height: 1;
-}
-ol,
-ul {
-  list-style: none;
-}
-blockquote,
-q {
-  quotes: none;
-}
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: '';
-  content: none;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-input {
-  -webkit-appearance: none;
-  border-radius: 0;
+  background: var(--black);
 }
 
 body {
@@ -132,33 +55,95 @@ img {
   height: auto;
 }
 
-/* header */
-.header {
-  background: var(--dark);
-  width: 100%;
-  padding: 0 2.5rem 0 2.5rem;
-  max-height: 5rem;
-  height: 5rem;
+.wrapper {
+  position: relative;
+  z-index: 0;
   display: flex;
-  justify-content: space-between;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+/*===================
+      navbar 
+====================*/
+.site-header {
+  display: flex;
   align-items: center;
-  z-index: 1000;
-  position: fixed;
+  color: var(--white);
+  background: var(--dark);
+  min-height: 5rem;
+  width: 100%;
+  flex-wrap: wrap;
+  position: absolute;
   top: 0;
-  left: 0;
-  bottom: auto;
-  right: 0;
+  z-index: 3;
+  margin-top: 0.8125rem;
 }
 
-.logo a {
-  cursor: pointer;
-}
-
-nav {
+.btn-header {
+  padding: 0 0.625rem;
   display: flex;
-  height: 100%;
   justify-content: center;
   align-items: center;
+}
+
+.btn-logo {
+  cursor: pointer;
+  text-decoration: none;
+  margin-left: 0.75rem;
+  min-height: inherit;
+}
+
+.btn-header img {
+  max-width: 100%;
+  width: 8rem;
+  height: auto;
+}
+
+.site-nav {
+  text-align: center;
+  flex: 1 1;
+  order: 2;
+  flex-basis: 100%;
+  min-height: inherit;
+  display: flex;
+}
+
+.site-nav > ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: inline-flex;
+  position: relative;
+  /* top: 5px; */
+}
+
+.site-nav > ul li {
+  border-bottom: 1px solid hsla(0, 0%, 100%, 0);
+  transition: all 0.2s ease-in;
+  display: flex;
+  align-items: center;
+}
+
+.site-nav > ul li:hover {
+  border-bottom-style: solid;
+  border-bottom-color: var(--white);
+  background-color: var(--black);
+}
+
+.site-nav a {
+  position: relative;
+}
+
+.site-nav span {
+  transition: color 0.2s ease-in-out;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 0.875rem;
+  padding: 1.25rem 1.5rem 1.25rem 1.5rem;
+  color: var(--white);
+  white-space: nowrap;
 }
 
 .nav-item {
@@ -170,12 +155,6 @@ nav {
   align-items: center;
   cursor: pointer;
   transition: all 0.2s ease-in;
-}
-
-.nav-item:hover {
-  border-bottom-style: solid;
-  border-bottom-color: var(--white);
-  background-color: var(--black);
 }
 
 .nav-text {
@@ -201,4 +180,45 @@ nav {
 
 .secondary:hover {
   background: var(--dark);
+}
+
+@media (min-width: 425px) {
+  .site-nav > ul {
+    justify-content: space-around;
+  }
+}
+
+@media (max-width: 780px) {
+  .site-nav {
+    overflow-x: scroll;
+    overflow-y: hidden;
+  }
+}
+
+@media (min-width: 780px) {
+  .site-header {
+    margin-top: 0;
+  }
+
+  .site-nav {
+    order: 0;
+    flex-basis: initial;
+    justify-content: center;
+  }
+
+  .main {
+    padding: var(--navHeightDesktop) 0;
+  }
+
+  .site-header {
+    padding: 0 2.5rem 0 2.5rem;
+  }
+}
+
+.hire {
+  display: flex;
+  align-items: center;
+  padding-right: 12px;
+  margin-left: auto;
+  min-height: inherit;
 }

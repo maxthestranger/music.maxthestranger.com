@@ -11,27 +11,29 @@ export default function Navbar() {
     'hit me up',
   ];
   return (
-    <header className="header">
-      <div className="logo">
-        <Link href="/">
-          <a>
-            <Image
-              src="/static/img/logo.svg"
-              alt="MTS Logo"
-              width="128"
-              height="48"
-            />
-          </a>
-        </Link>
-      </div>
-      <nav>
-        {navLink.map((link, index) => (
-          <div key={index} className="nav-item">
-            <Link href={`/${link}`}>
-              <a className="nav-text">{caps(link)}</a>
-            </Link>
-          </div>
-        ))}
+    <header className="site-header">
+      <Link href="/">
+        <a className="btn-header btn-logo">
+          <Image
+            src="/static/img/logo.svg"
+            alt="MTS Logo"
+            width="128"
+            height="48"
+          />
+        </a>
+      </Link>
+      <nav className="site-nav">
+        <ul>
+          {navLink.map((link, index) => (
+            <li key={index}>
+              <Link href={`/${link}`}>
+                <a>
+                  <span>{caps(link)}</span>
+                </a>
+              </Link>
+            </li>
+          ))}
+        </ul>
       </nav>
 
       <div className="hire">
