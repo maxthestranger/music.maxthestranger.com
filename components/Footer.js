@@ -1,6 +1,9 @@
 import Image from 'next/image';
+import { useState } from 'react';
 
 export default function Footer() {
+  const [mail, setMail] = useState('');
+  const [disabled, setDisabled] = useState(true);
   const socials = [
     {
       imgUrl: 'fb.svg',
@@ -28,6 +31,17 @@ export default function Footer() {
       url: 'https://soundcloud.com/maxthestranger',
     },
   ];
+
+  function handleChange(e) {
+    setMail(e.target.value);
+
+    if (/^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/.test(e.target.value)) {
+      setDisabled(false);
+    } else {
+      setDisabled(true);
+    }
+  }
+
   return (
     <footer className="footer">
       <div className="mail-list">
@@ -35,9 +49,14 @@ export default function Footer() {
         <form className="form">
           <div className="form-group">
             <i className="ri-mail-send-line"></i>
-            <input type="email" placeholder="Enter your email" />
+            <input
+              type="email"
+              placeholder="Enter your email"
+              value={mail}
+              onChange={handleChange}
+            />
           </div>
-          <button type="submit" disabled>
+          <button type="submit" disabled={disabled}>
             Subscribe
           </button>
         </form>

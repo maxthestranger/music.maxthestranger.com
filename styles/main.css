@@ -10,6 +10,7 @@
   --white: #ffffff;
   --text: #b8b8b8;
   --darker: #262626;
+  --secondary: #005ff8;
 
   --gradientDegree: 135deg;
 
@@ -296,6 +297,14 @@ img {
   font-size: 1.125rem;
   width: 100%;
   height: 4rem;
+  color: #fff;
+  background: var(--secondary);
+  transition: all 0.2s ease-in;
+  cursor: pointer;
+}
+
+.form button:hover {
+  background: #0155dd;
 }
 
 .form button:disabled {
