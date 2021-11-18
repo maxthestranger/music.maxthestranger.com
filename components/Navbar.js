@@ -15,7 +15,7 @@ export default function Navbar() {
       <Link href="/">
         <a className="btn-header btn-logo">
           <Image
-            src="/static/img/logo.svg"
+            src="/static/img/mts_music_logo.svg"
             alt="MTS Logo"
             width="128"
             height="48"

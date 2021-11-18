@@ -77,7 +77,7 @@ img {
   position: absolute;
   top: 0;
   z-index: 3;
-  margin-top: 0.8125rem;
+  /* margin-top: 0.8125rem; */
 }
 
 .btn-header {
