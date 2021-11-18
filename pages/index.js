@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 
 export default function Home() {
@@ -11,7 +12,9 @@ export default function Home() {
       </Head>
       <Navbar />
 
-      <main>Hello word</main>
+      <main className="main">Hello word</main>
+
+      <Footer />
     </div>
   );
 }
