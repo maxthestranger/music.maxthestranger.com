@@ -90,7 +90,7 @@ img {
 .btn-logo {
   cursor: pointer;
   text-decoration: none;
-  margin-left: 0.75rem;
+  /* margin-left: 0.75rem; */
   min-height: inherit;
 }
 
