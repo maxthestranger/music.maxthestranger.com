@@ -19,6 +19,9 @@
   --borderRadius: 5px;
 
   --duration: 0.2s;
+
+  --vh: 6.01px;
+  --vw: 19.05px;
 }
 
 /* resets */
@@ -54,6 +57,24 @@ a {
 img {
   width: 100%;
   height: auto;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 13px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #262626;
+  margin: 4px;
+  border: 1px solid #333333;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0c0c0c;
+  border-radius: 0px;
+  padding: 10px;
 }
 
 .wrapper {
@@ -207,10 +228,6 @@ img {
     justify-content: center;
   }
 
-  .main {
-    padding: var(--navHeightDesktop) 0;
-  }
-
   .site-header {
     padding: 0 2.5rem 0 2.5rem;
   }
@@ -222,6 +239,175 @@ img {
   padding-right: 12px;
   margin-left: auto;
   min-height: inherit;
+}
+
+/*===================
+      main 
+====================*/
+
+.main {
+  /* padding: var(--navHeightDesktop) 0; */
+  background: var(--black);
+  margin-top: 6.5rem;
+  min-height: calc(var(0.375625rem, 1vh) * 100 - 6.5rem);
+  position: relative;
+}
+
+@media (min-width: 769px) {
+  .main {
+    margin-top: 4.375rem;
+    min-height: calc(var(6.01px, 1vh) * 100 - 70px);
+  }
+}
+
+@media (min-width: 1280px) {
+  .main {
+    margin-top: 104px;
+    min-height: calc(var(--vh, 1vh) * 100 - 104px);
+  }
+}
+
+/*===================
+      hero 
+====================*/
+.hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 100vw;
+  min-height: 27rem;
+  margin-bottom: 6rem;
+}
+
+@media (min-width: 1024px) {
+  .hero {
+    height: calc(var(--vh, 1vh) * 100 - 70px);
+    margin-bottom: 7.75rem;
+    background-image: url(/static/img/top-image.png);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+  }
+}
+
+@media (min-width: 1280px) {
+  .hero {
+    height: calc(var(--vh, 1vh) * 100 - 104px);
+  }
+}
+
+.top-con-wrapper {
+  position: relative;
+  display: flex;
+  width: 100vw;
+  height: calc(var(--vh, 1vh) * 100 - 104px);
+  padding: 40px 0 20px;
+  background-image: url(/static/img/top-image.png);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+}
+
+@media (min-width: 769px) {
+  .top-con-wrapper {
+    height: calc(var(--vh, 1vh) * 100 - 70px);
+  }
+}
+
+@media (min-width: 1024px) {
+  .top-con-wrapper {
+    position: unset;
+    height: 100%;
+    background-image: none;
+  }
+}
+
+.linear-gradient {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(180deg, transparent, transparent, #000 98%);
+}
+
+.top-con {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100vw;
+  padding: 0 1rem;
+}
+
+@media (min-width: 1024px) {
+  .top-con {
+    justify-content: center;
+  }
+}
+
+.bottom-con {
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media (min-width: 1024px) {
+  .bottom-con {
+    flex-direction: row;
+  }
+}
+
+.stats {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 12rem;
+  margin: 0.875rem 0;
+}
+
+@media (min-width: 1024px) {
+  .stats {
+    width: 320px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .stats {
+    margin-right: 36px;
+  }
+}
+
+.stats h3 {
+  font-family: Bebas Neue, Poppins, Roboto, Helvetica Neue, sans-serif;
+  font-size: 2.5rem;
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: 0.0125rem;
+}
+
+@media (min-width: 1024px) {
+  h3 {
+    font-size: 1.625rem;
+  }
+}
+
+h3 {
+  padding: 0.625rem 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.stats span {
+  font-size: 0.9375rem;
+  font-weight: 400;
+  line-height: 1.4;
+  text-align: center;
+  letter-spacing: 0.00625rem;
 }
 
 /*===================

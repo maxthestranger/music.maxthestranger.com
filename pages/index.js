@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
+import Hero from '../sections/Hero';
 
 export default function Home() {
   return (
@@ -12,7 +13,9 @@ export default function Home() {
       </Head>
       <Navbar />
 
-      <main className="main">Hello word</main>
+      <main className="main">
+        <Hero />
+      </main>
 
       <Footer />
     </div>
