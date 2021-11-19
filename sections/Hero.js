@@ -3,7 +3,12 @@ export default function Hero() {
     <section className="hero">
       <div className="top-con-wrapper">
         <div className="linear-gradient" />
-        <div className="top-con">Please select a Track to create a Widget.</div>
+        <div className="top-con">
+          <h1>
+            High Quality Instrumentals for <br /> Independent Artists &amp;
+            Creators
+          </h1>
+        </div>
       </div>
 
       <div className="bottom-con">

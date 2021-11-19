@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 import Hero from '../sections/Hero';
+import Testimony from '../sections/Testimony';
 
 export default function Home() {
   return (
@@ -15,6 +16,8 @@ export default function Home() {
 
       <main className="main">
         <Hero />
+
+        <Testimony />
       </main>
 
       <Footer />
