@@ -719,6 +719,130 @@ section .title {
 }
 
 /*===================
+      youtbe 
+====================*/
+.yt {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: calc(var(--vh, 1vh) * 50);
+  padding: 3.75rem 0;
+  background-color: #151515;
+}
+
+.yt > div {
+  display: flex;
+  width: 100%;
+  max-width: 81.25rem;
+  margin: auto;
+}
+
+.yt .col {
+  display: flex;
+  min-height: 0.0625rem;
+  position: relative;
+  width: 100%;
+  padding: 0 0.9375rem 0.9375rem;
+  overflow: hidden;
+  padding-bottom: 0;
+}
+
+.widget {
+  align-items: center;
+  align-content: center;
+  padding: 0.9375rem;
+  display: flex;
+  position: relative;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.w:not(:last-child) {
+  margin-bottom: 1.25rem;
+  width: 100%;
+  position: relative;
+}
+
+.w-title {
+  color: var(--white);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15625rem;
+  margin: 0;
+}
+
+.w h2 {
+  font-size: 2.074rem;
+  font-weight: 700;
+  line-height: 1.4em;
+  color: var(--white);
+  margin: 0;
+}
+
+.w-desc {
+  color: var(--white);
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: normal;
+  line-height: 1.5;
+}
+
+.w a {
+  border: 0.0625rem solid #333;
+  background-color: #262626;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--white);
+  border-radius: 0.1875rem 0.1875rem 0.1875rem 0.1875rem;
+  padding: 1rem 1.25rem 1rem 1.25rem;
+  display: inline-block;
+  transition: all 0.1s ease-in;
+}
+
+.w a:hover {
+  background: var(--secondary);
+  border-color: var(--secondary);
+}
+
+.w ul {
+  padding: 0;
+  list-style-type: none;
+  margin: 0;
+}
+
+.w ul li {
+  font-size: 0.9rem;
+  padding: calc(0.625rem / 2);
+}
+
+.w ul li i {
+  margin-right: 0.3125rem;
+  color: #61ce70;
+}
+
+@media (min-width: 768px) {
+  .yt .col {
+    width: 50%;
+  }
+
+  .yt > div {
+    max-width: 75rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .yt .col {
+    width: 100%;
+  }
+
+  .yt > div {
+    flex-direction: column;
+  }
+}
+
+/*===================
       footer 
 ====================*/
 .footer {

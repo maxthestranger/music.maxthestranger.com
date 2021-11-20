@@ -4,6 +4,7 @@ import Navbar from '../components/Navbar';
 import Faq from '../sections/Faq';
 import Hero from '../sections/Hero';
 import Testimony from '../sections/Testimony';
+import Yt from '../sections/Yt';
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <main className="main">
         <Hero />
 
+        <Yt />
         <Faq />
         <Testimony />
       </main>
