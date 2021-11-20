@@ -843,6 +843,233 @@ section .title {
 }
 
 /*===================
+      pricing 
+====================*/
+.pricing {
+  position: relative;
+  width: 100%;
+  padding: 0 0.9375rem 0.9375rem;
+  overflow: hidden;
+  padding-bottom: 0;
+}
+
+.max-w {
+  width: 100%;
+  max-width: 81.25rem;
+  margin: auto;
+}
+
+.plans-section {
+  margin-bottom: 6rem;
+}
+
+.plans-section h1 {
+  padding: 0 0 0.5rem;
+  font-family: Bebas Neue, Poppins, Roboto, Helvetica Neue, sans-serif;
+  font-size: 2.5rem;
+  font-weight: 500;
+  line-height: 1.1;
+  color: #fff;
+  text-align: center;
+  letter-spacing: 0.0125rem;
+}
+
+.plans-section .subtitle {
+  margin-bottom: 2rem;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.5;
+  color: #b8b8b8;
+  text-align: center;
+  letter-spacing: 0.0125rem;
+}
+
+.plans-con {
+  display: flex;
+  justify-content: center;
+}
+
+.plan {
+  width: calc(100% / 3);
+  margin-bottom: 1.5rem;
+}
+
+.plan-col {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 1rem;
+  background-color: #121212;
+  border-radius: 0.5rem;
+}
+
+.top-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+
+.title-con {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.desc-more {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  height: 100%;
+  font-size: 0.875rem;
+  color: #b8b8b8;
+  letter-spacing: 0.0175rem;
+}
+
+.tt {
+  display: inline-block;
+  margin-right: 0.5rem;
+  font-size: 1.375rem;
+  font-weight: 500;
+  line-height: 1.64;
+  color: #fff;
+  letter-spacing: 0.015625rem;
+}
+
+.sub {
+  margin-bottom: 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.71;
+  color: #b8b8b8;
+  letter-spacing: 0.01875rem;
+}
+
+.price-con {
+  margin-bottom: 2rem;
+}
+
+.price-con .price {
+  font-size: 1.375rem;
+  font-weight: 500;
+  line-height: 1.64;
+  color: #fff;
+  letter-spacing: 0.015625rem;
+}
+
+.plan-period {
+  font-size: 0.875rem;
+  line-height: 1.71;
+  color: #fff;
+  letter-spacing: 0.01875rem;
+}
+
+.see-details {
+  height: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.see-details ul {
+  margin-bottom: 1rem;
+  list-style: none;
+  padding: 0;
+}
+
+.see-details ul li {
+  margin-bottom: 0.75rem;
+  margin-left: 1.125rem;
+  /* list-style: disc; */
+}
+
+.see-details ul li i {
+  margin-right: 0.625rem;
+}
+
+.see-details ul li .ri-checkbox-circle-line {
+  color: rgb(64, 219, 129);
+}
+
+.see-details ul li .ri-close-circle-line {
+  color: rgb(255, 99, 79);
+}
+
+.see-more {
+  font-size: 0.875rem;
+  color: #b8b8b8;
+  letter-spacing: 0.0125rem;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  border-bottom: 0.0625rem dashed #b8b8b8;
+}
+
+@media (min-width: 480px) {
+  .pricing {
+    padding: 0 1.5rem 1.25rem;
+  }
+
+  .plans-section h1 {
+    padding-bottom: 0.75rem;
+    font-size: 3.875rem;
+    line-height: 1.03;
+    letter-spacing: -0.025rem;
+  }
+}
+
+@media (min-width: 600px) {
+  .plans-section h1 {
+    font-size: 3.5rem;
+  }
+}
+
+@media (min-width: 769px) {
+  .plan-col {
+    padding: 2rem;
+  }
+
+  .title-con {
+    justify-content: flex-start;
+  }
+
+  .see-details {
+    height: 100%;
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+@media (min-width: 1024px) {
+  .plans-section {
+    max-width: 66rem;
+    margin: 0 auto 7.75rem;
+  }
+
+  .plan:not(:last-child) {
+    margin-right: 1.5rem;
+  }
+
+  .sub {
+    height: 5.875rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .sub {
+    height: 4.3125rem;
+  }
+}
+
+@media (min-width: 1348px) {
+  .pricing {
+    padding: 0 0 1.875rem;
+  }
+}
+
+/*===================
       footer 
 ====================*/
 .footer {

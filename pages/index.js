@@ -3,6 +3,7 @@ import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 import Faq from '../sections/Faq';
 import Hero from '../sections/Hero';
+import Pricing from '../sections/Pricing';
 import Testimony from '../sections/Testimony';
 import Yt from '../sections/Yt';
 
@@ -19,6 +20,7 @@ export default function Home() {
       <main className="main">
         <Hero />
 
+        <Pricing />
         <Yt />
         <Faq />
         <Testimony />
