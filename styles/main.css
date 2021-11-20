@@ -581,6 +581,144 @@ p {
 }
 
 /*===================
+      faq 
+====================*/
+.faq {
+  margin-bottom: 6rem;
+}
+
+.faq-con {
+  position: relative;
+  width: 100%;
+  padding: 0 0.9375rem 0.9375rem;
+  overflow: hidden;
+  padding-bottom: 0;
+}
+
+.max-width-con {
+  width: 100%;
+  max-width: 81.25rem;
+  margin: auto;
+}
+
+@media (min-width: 1024px) {
+  section .title {
+    font-size: 40px;
+  }
+}
+
+section .title {
+  margin-bottom: 2rem;
+  font-family: Bebas Neue, Poppins, Roboto, Helvetica Neue, sans-serif;
+  font-size: 3.875rem;
+  font-weight: 500;
+  line-height: 1.03;
+  color: #fff;
+  text-align: center;
+  letter-spacing: -0.025rem;
+}
+
+.faq-quiz {
+  max-width: 38.25rem;
+  margin: auto;
+  overflow: hidden;
+}
+
+.quiz {
+  padding: 1.375rem 0;
+  border-bottom: 0.0625rem solid hsla(0, 0%, 100%, 0.15);
+  transition: all 0.2s ease-in-out;
+}
+
+.quiz-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0;
+  cursor: pointer;
+}
+
+.quiz-info h2 {
+  padding: 0;
+  margin-right: 0.5rem;
+  font-size: 1.0625rem;
+  font-weight: 400;
+  line-height: 1.65;
+  letter-spacing: 0.0125rem;
+  color: var(--white);
+}
+
+.quiz-info i {
+  display: none;
+  font-size: 1.5rem;
+  transition: transform 0.2s ease-in-out;
+  transform: rotate(180deg);
+}
+
+.answer p {
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.5;
+  color: #b8b8b8;
+  letter-spacing: 0.0125rem;
+}
+
+@media (min-width: 480px) {
+  .faq-con {
+    padding: 0 24px 20px;
+  }
+
+  .quiz {
+    min-height: 4.25rem;
+    padding: 1.375rem 1.5rem;
+    background-color: #121212;
+    border-bottom: none;
+    border-radius: 0.5rem;
+  }
+
+  .quiz:not(:last-child) {
+    margin-bottom: 0.75rem;
+  }
+
+  .quiz-info i {
+    display: block;
+  }
+
+  .answer {
+    display: none;
+  }
+
+  .quiz.opened {
+    min-height: 6.125rem;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .quiz.opened .answer {
+    display: block;
+  }
+
+  .quiz.opened .quiz-info i {
+    transform: rotate(0);
+  }
+}
+
+@media (min-width: 1024px) {
+  .faq {
+    margin-bottom: 112px;
+  }
+
+  .faq-quiz {
+    width: 85%;
+  }
+}
+
+@media (min-width: 1348px) {
+  .faq-con {
+    padding: 0 0 30px;
+  }
+}
+
+/*===================
       footer 
 ====================*/
 .footer {

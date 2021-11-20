@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
+import Faq from '../sections/Faq';
 import Hero from '../sections/Hero';
 import Testimony from '../sections/Testimony';
 
@@ -17,6 +18,7 @@ export default function Home() {
       <main className="main">
         <Hero />
 
+        <Faq />
         <Testimony />
       </main>
 
