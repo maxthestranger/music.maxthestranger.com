@@ -4,6 +4,7 @@ import Navbar from '../components/Navbar';
 import Faq from '../sections/Faq';
 import Hero from '../sections/Hero';
 import Pricing from '../sections/Pricing';
+import Services from '../sections/Services';
 import Testimony from '../sections/Testimony';
 import Yt from '../sections/Yt';
 
@@ -20,6 +21,7 @@ export default function Home() {
       <main className="main">
         <Hero />
 
+        <Services />
         <Pricing />
         <Yt />
         <Faq />
