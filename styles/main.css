@@ -1059,6 +1059,12 @@ section .title {
   background-color: transparent;
   border: none;
   border-bottom: 0.0625rem dashed #b8b8b8;
+  transition: all 0.1s ease-in;
+}
+
+.see-more:hover {
+  color: var(--white);
+  border-bottom-color: var(--white);
 }
 
 .most-popular-badge {
