@@ -1,9 +1,10 @@
-import { useMediaPredicate } from 'react-media-hook';
+import useMediaQuery from '../hooks/useMediaQuery';
+
 import Link from 'next/link';
 import PriceDetail from '../components/PlanDetail';
 
 export default function Pricing() {
-  const tablet = useMediaPredicate('(max-width: 1024px)');
+  const tablet = useMediaQuery('(max-width: 1024px)');
   const pricingData = [
     {
       title: 'Premium',
