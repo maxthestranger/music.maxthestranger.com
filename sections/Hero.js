@@ -13,7 +13,7 @@ export default function Hero() {
 
       <div className="bottom-con">
         <div className="stats">
-          <h3>1,320,000+</h3>
+          <h3>Beat Store section</h3>
           <span>Digital products sold</span>
         </div>
       </div>

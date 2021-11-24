@@ -1364,6 +1364,10 @@ section .title {
   letter-spacing: 0;
   padding: 0.625rem 0;
   color: var(--white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 
 .market-title h2 a {
@@ -1754,6 +1758,10 @@ figure figcaption {
 
   .hover-section {
     opacity: 1;
+  }
+
+  .market-title h2 a {
+    display: none;
   }
 }
 
