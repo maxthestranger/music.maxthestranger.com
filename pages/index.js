@@ -3,6 +3,7 @@ import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 import Faq from '../sections/Faq';
 import Hero from '../sections/Hero';
+import MarketPlace from '../sections/MarketPlace';
 import Pricing from '../sections/Pricing';
 import Services from '../sections/Services';
 import Testimony from '../sections/Testimony';
@@ -20,7 +21,7 @@ export default function Home() {
 
       <main className="main">
         <Hero />
-
+        <MarketPlace />
         <Services />
         <Pricing />
         <Yt />
