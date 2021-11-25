@@ -104,6 +104,7 @@ img {
   position: absolute;
   top: 0;
   z-index: 3;
+  position: fixed;
   /* margin-top: 0.8125rem; */
 }
 
@@ -267,8 +268,8 @@ img {
 
 @media (min-width: 1280px) {
   .main {
-    margin-top: 104px;
-    min-height: calc(var(--vh, 1vh) * 100 - 104px);
+    margin-top: 80px;
+    min-height: calc(var(--vh, 1vh) * 100 - 80px);
   }
 }
 
@@ -1459,9 +1460,9 @@ section .title {
   transition: all 0.2s ease-in-out; */
 }
 
-.pack-card:hover {
-  /* background: #212024; */
-}
+/* .pack-card:hover {
+  background: #212024;
+} */
 
 .grid-item {
   display: flex;
