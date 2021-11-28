@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 
-export default function Navbar() {
+export default function Navbar({ handleModal }) {
   const navLink = [
     'buy beats',
     'licencing',
@@ -37,7 +37,7 @@ export default function Navbar() {
       </nav>
 
       <div className="hire">
-        <button className="secondary" type="button">
+        <button className="secondary" type="button" onClick={handleModal}>
           Hire Me
         </button>
       </div>
