@@ -3,6 +3,7 @@ import { useState } from 'react';
 import Footer from '../components/Footer';
 import HireMe from '../components/HireMe';
 import Navbar from '../components/Navbar';
+import BeatStore from '../components/BeatStore';
 import Faq from '../sections/Faq';
 import Hero from '../sections/Hero';
 import MarketPlace from '../sections/MarketPlace';
@@ -28,6 +29,7 @@ export default function Home() {
 
       <main className="main">
         <Hero />
+        <BeatStore />
         <MarketPlace />
         <Services />
         <Pricing />

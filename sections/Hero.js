@@ -10,13 +10,6 @@ export default function Hero() {
           </h1>
         </div>
       </div>
-
-      <div className="bottom-con">
-        <div className="stats">
-          <h3>Beat Store section</h3>
-          <span>Digital products sold</span>
-        </div>
-      </div>
     </section>
   );
 }
